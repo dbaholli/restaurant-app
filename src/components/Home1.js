@@ -32,7 +32,7 @@ class Home1 extends Component {
     return <Container style={{ paddingTop: "100px" }}>
       <Row>
         <Col>
-          <h3>Lab 1 CRUD </h3>
+          <h3>Add New Staff</h3>
         </Col>
       </Row>
       <Row>
