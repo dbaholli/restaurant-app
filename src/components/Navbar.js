@@ -31,7 +31,7 @@ function Navbar() {
                 <Link to="/menu"> Menu </Link>
                 <Link to="/staff"> Staff </Link>
                 <Link to="/reservation"> Reservation </Link>
-                <Link to="/Search"> Search Food </Link>
+                <Link to="/Search"> Search Recipes </Link>
                 <Link to="/about"> About </Link>
                 <Link to="/contact"> Contact </Link>
                 <button onClick={toggleNavbar}>

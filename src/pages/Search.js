@@ -19,7 +19,7 @@ function Search() {
     if (query !== "") {
       const result = await Axios.get(url);
       if (!result.data.more) {
-        return setAlert("No food with such name");
+        return setAlert("No recipe with such name");
       }
       console.log(result);
       setRecipes(result.data.hits);
@@ -39,7 +39,7 @@ function Search() {
 
   return (
     <div className="App">
-      <h1>Food Search</h1>
+      <h1>Recipes Search</h1>
       <form onSubmit={onSubmit} className="search-form">
         {alert !== "" && <Alert alert={alert} />}
         <input
@@ -48,7 +48,7 @@ function Search() {
           onChange={onChange}
           value={query}
           autoComplete="off"
-          placeholder="Search Food"
+          placeholder="Search Recipe"
         />
         <input type="submit" value="Search" />
       </form>
