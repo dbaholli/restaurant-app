@@ -24,7 +24,7 @@ function Navbar() {
                     <Link to="/reservation"> Reservation </Link>
                     <Link to="/Search"> Search Recipes </Link>
                     <Link to="/Order"> Order </Link>
-                    <Link to="/about"> About </Link>
+                    {/* <Link to="/about"> About </Link> */}
                     <Link to="/contact"> Contact </Link> 
                 </div>
             </div>
@@ -36,7 +36,7 @@ function Navbar() {
                 <Link to="/reservation"> Reservation </Link>
                 <Link to="/Search"> Search Recipes </Link>
                 <Link to="/Order"> Order </Link>
-                <Link to="/about"> About </Link>
+                {/* <Link to="/about"> About </Link> */}
                 <Link to="/contact"> Contact </Link>
                 <button onClick={toggleNavbar}>
                     <ReorderIcon />
