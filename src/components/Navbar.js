@@ -22,6 +22,7 @@ function Navbar() {
                     <Link to="/staff"> Staff </Link>
                     <Link to="/aplikimet"> Aplikimet </Link>
                     <Link to="/reservation"> Reservation </Link>
+                    <Link to="/event"> Events </Link>
                     <Link to="/Search"> Search Recipes </Link>
                     <Link to="/Order"> Order </Link>
                     {/* <Link to="/about"> About </Link> */}
@@ -34,6 +35,7 @@ function Navbar() {
                 <Link to="/staff"> Staff </Link>
                 <Link to="/aplikimet"> Aplikimet </Link>
                 <Link to="/reservation"> Reservation </Link>
+                <Link to="/event"> Events </Link>
                 <Link to="/Search"> Search Recipes </Link>
                 <Link to="/Order"> Order </Link>
                 {/* <Link to="/about"> About </Link> */}

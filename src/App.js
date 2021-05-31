@@ -11,6 +11,7 @@ import Reservation from './pages/Reservation';
 import Search from './pages/Search';
 import Order from './pages/Order';
 import Aplikimet from './pages/Aplikimet';
+import Event from './pages/Event';
 
 function App() {
   return <div className="App">
@@ -23,6 +24,7 @@ function App() {
           <Route path="/staff" exact component={Staff}/>
           <Route path="/aplikimet" exact component={Aplikimet}/>
           <Route path="/reservation" exact component={Reservation}/>
+          <Route path="/event" exact component={Event}/>
           <Route path="/Order" exact component={Order}/>
           <Route path="/search" exact component={Search}/>
           <Route path="/contact" exact component={Contact}/>
