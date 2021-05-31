@@ -10,3 +10,43 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.btn-info {
+  color: #fff;
+  background-color: #FFA500;
+  border-color: #FFA500;
+}
+.btn-danger {
+  color: #fff;
+  background-color: #000000;
+  border-color: #000000;
+  background: #000000;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #FFA500;
+  border-color: #FFA500;
+}
+
+.App-link {
+  color: #fbd261;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
