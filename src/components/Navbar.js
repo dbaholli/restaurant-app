@@ -20,6 +20,7 @@ function Navbar() {
                     <Link to="/"> Home </Link>
                     <Link to="/menu"> Menu </Link>
                     <Link to="/staff"> Staff </Link>
+                    <Link to="/aplikimet"> Aplikimet </Link>
                     <Link to="/reservation"> Reservation </Link>
                     <Link to="/Search"> Search Recipes </Link>
                     <Link to="/Order"> Order </Link>
@@ -31,6 +32,7 @@ function Navbar() {
                 <Link to="/"> Home </Link>
                 <Link to="/menu"> Menu </Link>
                 <Link to="/staff"> Staff </Link>
+                <Link to="/aplikimet"> Aplikimet </Link>
                 <Link to="/reservation"> Reservation </Link>
                 <Link to="/Search"> Search Recipes </Link>
                 <Link to="/Order"> Order </Link>
