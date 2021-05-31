@@ -10,6 +10,7 @@ import Staff from './pages/Staff';
 import Reservation from './pages/Reservation';
 import Search from './pages/Search';
 import Order from './pages/Order';
+import Aplikimet from './pages/Aplikimet';
 
 function App() {
   return <div className="App">
@@ -20,6 +21,7 @@ function App() {
           <Route path="/menu" exact component={Menu}/>
           <Route path="/about" exact component={About}/>
           <Route path="/staff" exact component={Staff}/>
+          <Route path="/aplikimet" exact component={Aplikimet}/>
           <Route path="/reservation" exact component={Reservation}/>
           <Route path="/Order" exact component={Order}/>
           <Route path="/search" exact component={Search}/>

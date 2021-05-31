@@ -20,10 +20,11 @@ function Navbar() {
                     <Link to="/"> Home </Link>
                     <Link to="/menu"> Menu </Link>
                     <Link to="/staff"> Staff </Link>
+                    <Link to="/aplikimet"> Aplikimet </Link>
                     <Link to="/reservation"> Reservation </Link>
                     <Link to="/Search"> Search Recipes </Link>
                     <Link to="/Order"> Order </Link>
-                    <Link to="/about"> About </Link>
+                    {/* <Link to="/about"> About </Link> */}
                     <Link to="/contact"> Contact </Link> 
                 </div>
             </div>
@@ -31,10 +32,11 @@ function Navbar() {
                 <Link to="/"> Home </Link>
                 <Link to="/menu"> Menu </Link>
                 <Link to="/staff"> Staff </Link>
+                <Link to="/aplikimet"> Aplikimet </Link>
                 <Link to="/reservation"> Reservation </Link>
                 <Link to="/Search"> Search Recipes </Link>
                 <Link to="/Order"> Order </Link>
-                <Link to="/about"> About </Link>
+                {/* <Link to="/about"> About </Link> */}
                 <Link to="/contact"> Contact </Link>
                 <button onClick={toggleNavbar}>
                     <ReorderIcon />
