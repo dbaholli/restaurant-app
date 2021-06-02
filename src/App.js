@@ -12,6 +12,8 @@ import Search from './pages/Search';
 import Order from './pages/Order';
 import Aplikimet from './pages/Aplikimet';
 import Event from './pages/Event';
+import Products from './components/Products';
+import { productData } from './components/Products/data';
 
 function App() {
   return <div className="App">
@@ -28,7 +30,9 @@ function App() {
           <Route path="/Order" exact component={Order}/>
           <Route path="/search" exact component={Search}/>
           <Route path="/contact" exact component={Contact}/>
+          <Route path="/products" exact component={Products}/>
         </Switch>
+        <Products heading='Choose your favorite' data={productData}/>
         <Footer />
       </Router>
     </div>;
