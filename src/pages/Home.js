@@ -19,7 +19,7 @@ function Home() {
 
 
                 <Link to="/aplikimet">
-                    <button> APPLY FOR JOB </button>
+                    <button>JOBS</button>
                 </Link>
            </div>
         </div>

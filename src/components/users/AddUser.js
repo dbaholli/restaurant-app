@@ -25,7 +25,7 @@ const AddUser = () => {
   return (
     <div className="container">
       <div className="w-75 mx-auto shadow p-5">
-        <h2 className="text-center mb-4">Add A User</h2>
+        <h2 className="text-center mb-4">Add</h2>
         <form onSubmit={e => onSubmit(e)}>
           <div className="form-group">
             <input
@@ -77,7 +77,7 @@ const AddUser = () => {
               onChange={e => onInputChange(e)}
             />
           </div>
-          <button className="btn btn-primary btn-block">Add User</button>
+          <button className="btn btn-primary btn-block">Add</button>
         </form>
       </div>
     </div>

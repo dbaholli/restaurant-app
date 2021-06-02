@@ -11,7 +11,7 @@ namespace ReactASPCrud.Services
         private static int Count = 1;
 
         private static readonly string[] names = new string[] { "Filan", "Mary", "Susan", "Joe", "Paul", "Carl", "Amanda", "Neil" };
-        private static readonly string[] surnames = new string[] { "Fisteku", "O'Neil", "MacDonald", "Gay", "Bailee", "Saigan", "Strip", "Spenser" };
+        private static readonly string[] surnames = new string[] { "Fisteku", "O'Neil", "MacDonald", "Johnson", "Bailee", "Saigan", "Strip", "Spenser" };
         private static readonly string[] extensions = new string[] { "@gmail.com", "@hotmail.com", "@outlook.com", "@icloud.com", "@yahoo.com" };
 
         static UserService()

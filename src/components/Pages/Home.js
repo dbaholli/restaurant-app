@@ -24,8 +24,9 @@ const Home = () => {
       <div className="py-4">
         <h1>Worker Applications</h1>
         <div className="container">
-        <Link className="btn btn-outline-light" to="/users/add">Add User</Link>
-      </div>
+        <Link className="btn btn-outline-light" to="/users/add">Add</Link>
+        </div>
+        
         <table class="table border shadow">
           <thead class="thead-dark">
             <tr>
