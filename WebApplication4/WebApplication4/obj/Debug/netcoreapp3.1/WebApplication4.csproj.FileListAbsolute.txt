@@ -29,3 +29,5 @@ C:\Users\forte\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp
 C:\Users\forte\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp3.1\WebApplication4.dll
 C:\Users\forte\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp3.1\WebApplication4.pdb
 C:\Users\forte\source\repos\WebApplication4\WebApplication4\obj\Debug\netcoreapp3.1\WebApplication4.genruntimeconfig.cache
+C:\react-apps\restaurant-app\WebApplication4\WebApplication4\obj\Debug\netcoreapp3.1\WebApplication4.dll
+C:\react-apps\restaurant-app\WebApplication4\WebApplication4\obj\Debug\netcoreapp3.1\WebApplication4.pdb
