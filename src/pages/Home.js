@@ -14,12 +14,12 @@ function Home() {
                 <h1> UBT Project</h1>
                 <p> Restaurant WebApp</p>
                 <Link to="/order">
-                    <button> ORDER NOW </button>
+                    <button> Order now </button>
                 </Link>
 
 
                 <Link to="/aplikimet">
-                    <button> APPLY FOR JOB </button>
+                    <button> Apply for job </button>
                 </Link>
            </div>
         </div>
