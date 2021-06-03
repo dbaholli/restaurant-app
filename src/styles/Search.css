@@ -104,7 +104,7 @@ h1 {
 }
 
 .recipe h2 {
-  background-color: rgba(99, 87, 87, 0.7);
+  background-color: rgba(131, 109, 109, 0.7);
   border-radius: 0.5rem;
   padding: 0.3rem 0.5rem;
   position: absolute;
@@ -124,7 +124,7 @@ h1 {
 
 .recipe a {
   font-size: 1.8rem;
-  color: #36332b;
+  color: #7e796b;
 }
 
 .recipe button {
