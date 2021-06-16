@@ -96,7 +96,7 @@ h1 {
   margin: 3rem;
   display: flex;
   flex-direction: column;
-  background-color: #8b8478;
+  background-color: #b6b69c;
   padding: 2rem;
   position: relative;
   border-radius: 0.5rem;
@@ -124,7 +124,7 @@ h1 {
 
 .recipe a {
   font-size: 1.8rem;
-  color: #7e796b;
+  color: #1b1b1b;
 }
 
 .recipe button {
@@ -154,6 +154,6 @@ h1 {
 }
 
 .ingredient-weight {
-  color: #645e56;
+  color: #3f3d3a;
   font-size: 1.3rem;
 }
