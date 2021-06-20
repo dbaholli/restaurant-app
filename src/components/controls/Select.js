@@ -7,7 +7,7 @@ export default function Select(props) {
 
     return (
         <FormControl 
-        variant="outline">
+        variant="outlined">
             <InputLabel>{label}</InputLabel>
             <MuiSelect
             label={label}

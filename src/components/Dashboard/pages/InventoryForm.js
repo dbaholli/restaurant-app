@@ -45,6 +45,18 @@ export default function InventoryForm() {
                         value={values.email}
                         onChange={handleInputChange}
                     />
+                    <Controls.Input
+                        label="Mobile"
+                        name="mobile"
+                        value={values.mobile}
+                        onChange={handleInputChange}
+                    />
+                    <Controls.Input
+                        label="City"
+                        name="city"
+                        value={values.city}
+                        onChange={handleInputChange}
+                    />
                 </Grid> 
                 <Grid item xs={6}>
                     <Controls.RadioGroup
@@ -60,6 +72,18 @@ export default function InventoryForm() {
                     value={values.departmentId}
                     onChange={handleInputChange}
                     options={inventoryService.getDepartmentCollection()}
+                    />
+                    <Controls.DatePicker
+                    name="orderDate"
+                    label="Order Date"
+                    value={values.orderDate}
+                    onChange={handleInputChange}
+                    />
+                    <Controls.Checkbox
+                    name="isPermanent"
+                    label="Permanent Supplier"
+                    value={values.isPermanent}
+                    onChange={handleInputChange}
                     />
                     
                 </Grid>   
