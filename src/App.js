@@ -14,6 +14,7 @@ import Aplikimet from './pages/Aplikimet';
 import Event from './pages/Event';
 import Products from './components/Products';
 import { productData } from './components/Products/data';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return <div className="App">
@@ -31,9 +32,16 @@ function App() {
           <Route path="/search" exact component={Search}/>
           <Route path="/contact" exact component={Contact}/>
           <Route path="/products" exact component={Products}/>
+          
+          {/* <Products heading='Choose your favorite' data={productData}/> */}
+          
         </Switch>
-        <Products heading='Choose your favorite' data={productData}/>
+        <Switch>
+          <Route path="/Dashboard" exact component={Dashboard}/>
+        </Switch>
+        
         <Footer />
+        
       </Router>
     </div>;
 }
