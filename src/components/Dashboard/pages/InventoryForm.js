@@ -53,7 +53,8 @@ export default function InventoryForm() {
     const handleSubmit = e => {
     e.preventDefault();
     if (validate())
-        window.alert('testing')  
+        inventoryService.insertSupplier(values)
+        resetForm()
     }
 
     return (
