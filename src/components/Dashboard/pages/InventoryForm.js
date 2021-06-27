@@ -21,7 +21,8 @@ const initialFValues = {
     isPermanent: false,
 }
 
-export default function InventoryForm() {
+export default function InventoryForm(props) {
+    const { addOrEdit, recordForEdit } = props
 
     const validate = (fieldValues = values) => {
         let temp = {...errors}
@@ -53,9 +54,16 @@ export default function InventoryForm() {
     const handleSubmit = e => {
     e.preventDefault();
     if (validate())
-        inventoryService.insertSupplier(values)
-        resetForm()
+        addOrEdit(values, resetForm);
+
     }
+
+    useEffect(() => {
+        if(recordForEdit != null)
+        setValues({
+            ...recordForEdit
+        })
+    }, [recordForEdit])
 
     return (
         <Form onSubmit={handleSubmit}>
