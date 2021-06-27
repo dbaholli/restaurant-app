@@ -18,9 +18,15 @@ export function insertSupplier(data) {
 }
 
 export function updateSupplier(data) {
-    let supplier = getAllSuppliers();
+    let suppliers = getAllSuppliers();
     let recordIndex = suppliers.findIndex(x => x.id == data.id);
     suppliers[recordIndex] = { ...data }
+    localStorage.setItem(KEYS.suppliers, JSON.stringify(suppliers));
+}
+
+export function deleteSupplier(id) {
+    let suppliers = getAllSuppliers();
+    suppliers = suppliers.filter(x => x.id != id)
     localStorage.setItem(KEYS.suppliers, JSON.stringify(suppliers));
 }
 

@@ -10,7 +10,9 @@ import { Search } from "@material-ui/icons";
 import AddIcon from "@material-ui/icons/Add";
 import Popup from "../../../components/Popup";
 import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
-import CloseIcon from '@material-ui/icons/Close'
+import CloseIcon from '@material-ui/icons/Close';
+import Notification from "../../../components/Notification";
+import ConfirmDialog from '../../ConfirmDialog';
 
 const useStyles = makeStyles(theme =>({
     pageContent: {
@@ -41,6 +43,8 @@ export default function Inventory() {
     const [records, setRecords] = useState(inventoryService.getAllSuppliers())
     const [filterFn, setFilterFn] = useState({ fn: items => { return items; } })
     const [openPopup, setOpenPopup] = useState(false)
+    const [notify, setNotify] = useState({isOpen:false, message: '', type:''})
+    const [confirmDialog, setConfirmDialog] = useState({ isOpen: false, title: '', subTitle: '' })
 
     const {
         TblContainer,
@@ -70,11 +74,30 @@ export default function Inventory() {
         setRecordForEdit(null)
         setOpenPopup(false)
         setRecords(inventoryService.getAllSuppliers())
+        setNotify({
+            isOpen: true,
+            message: 'Submitted Successfully',
+            type: 'success'
+        })
     }
 
     const openInPopup = item => {
         setRecordForEdit(item)
         setOpenPopup(true)
+    }
+
+    const onDelete = id => {
+            setConfirmDialog({
+                ...confirmDialog,
+                isOpen: false
+            })
+            inventoryService.deleteSupplier(id);
+            setRecords(inventoryService.getAllSuppliers())
+            setNotify({
+                isOpen: true,
+                message: 'Deleted Successfully',
+                type: 'error'
+            })
     }
 
     return (
@@ -122,7 +145,15 @@ export default function Inventory() {
                                         <EditOutlinedIcon fontSize="small"/>
                                         </Controls.ActionButton>
                                         <Controls.ActionButton
-                                            color="secondary">
+                                            color="secondary"
+                                            onClick={() => {
+                                                setConfirmDialog({
+                                                    isOpen: true,
+                                                    title: 'Are you sure to delete this record ?',
+                                                    subTitle: "You can't undo this operation",
+                                                    onConfirm: () => { onDelete(item.id) }
+                                                }) 
+                                            }}>
                                             <CloseIcon fontSize="small" />
                                         </Controls.ActionButton>
                                     </TableCell>
@@ -142,6 +173,14 @@ export default function Inventory() {
                 recordForEdit = {recordForEdit} 
                 addOrEdit={addOrEdit}/>
             </Popup>
+            <Notification 
+                notify={notify}
+                setNotify={setNotify}
+            />
+            <ConfirmDialog 
+            confirmDialog = {confirmDialog}
+            setConfirmDialog = {setConfirmDialog}
+            />
         </>
     )
 }
