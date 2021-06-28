@@ -17,6 +17,19 @@ export function insertSupplier(data) {
     localStorage.setItem(KEYS.suppliers,JSON.stringify(suppliers))
 }
 
+export function updateSupplier(data) {
+    let suppliers = getAllSuppliers();
+    let recordIndex = suppliers.findIndex(x => x.id == data.id);
+    suppliers[recordIndex] = { ...data }
+    localStorage.setItem(KEYS.suppliers, JSON.stringify(suppliers));
+}
+
+export function deleteSupplier(id) {
+    let suppliers = getAllSuppliers();
+    suppliers = suppliers.filter(x => x.id != id)
+    localStorage.setItem(KEYS.suppliers, JSON.stringify(suppliers));
+}
+
 export function generateSupplierId() {
     if (localStorage.getItem(KEYS.supplierId) == null)
         localStorage.setItem(KEYS.supplierId, '0')
@@ -28,5 +41,11 @@ export function generateSupplierId() {
 export function getAllSuppliers() { 
     if (localStorage.getItem(KEYS.suppliers) == null)
         localStorage.setItem(KEYS.suppliers, JSON.stringify([]))
-    return JSON.parse(localStorage.getItem(KEYS.suppliers));
+    let suppliers = JSON.parse(localStorage.getItem(KEYS.suppliers));
+    //map departmentID me department title
+    let departments = getDepartmentCollection();
+    return suppliers.map(x =>({
+        ...x,
+        department : departments[x.departmentId-1].title
+    }))
 }
