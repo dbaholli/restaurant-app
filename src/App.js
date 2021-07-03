@@ -17,6 +17,8 @@ import Event from './pages/Event';
 import Products from './components/Products';
 import { productData } from './components/Products/data';
 import Dashboard from './pages/Dashboard';
+import Salary from './pages/Salary';
+import Notifications from './pages/Notifications';
 
 function App() {
 
@@ -35,10 +37,11 @@ function App() {
           <Route path="/reservation" exact component={Reservation}/>
           <Route path="/event" exact component={Event}/>
           <ProtectedRoute path="/Order" exact component={Order}/>
+          <ProtectedRoute path="/Salary" exact component={Salary}/>
           <Route path="/search" exact component={Search}/>
           <Route path="/contact" exact component={Contact}/>
           <Route path="/products" exact component={Products}/>
-          
+          <Route path="/notifications" exact component={Notifications}/>
           {/* <Products heading='Choose your favorite' data={productData}/> */}
           
         </Switch>
