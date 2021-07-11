@@ -19,6 +19,7 @@ import { productData } from './components/Products/data';
 import Dashboard from './pages/Dashboard';
 import Salary from './pages/Salary';
 import Notifications from './pages/Notifications';
+import Location from './pages/Location';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <ProtectedRoute path="/about" exact component={About}/>
           <ProtectedRoute path="/staff" exact component={Staff}/>
           <ProtectedRoute path="/dashboard" exact component={Dashboard} />
+          <ProtectedRoute path="/location" exact component={Location}/>
           <Route path="/aplikimet" exact component={Aplikimet}/>
           <Route path="/reservation" exact component={Reservation}/>
           <Route path="/event" exact component={Event}/>
