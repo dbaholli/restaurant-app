@@ -124,3 +124,4 @@ C:\Users\OnLine\Desktop\restaurant-app\ReactASPCrud\ReactASPCrud\obj\Debug\net5.
 C:\Users\OnLine\Desktop\restaurant-app\ReactASPCrud\ReactASPCrud\obj\Debug\net5.0\ref\ReactASPCrud.dll
 C:\Users\OnLine\Desktop\restaurant-app\ReactASPCrud\ReactASPCrud\obj\Debug\net5.0\ReactASPCrud.pdb
 C:\Users\OnLine\Desktop\restaurant-app\ReactASPCrud\ReactASPCrud\obj\Debug\net5.0\ReactASPCrud.genruntimeconfig.cache
+C:\Users\OnLine\Desktop\restaurant-app\ReactASPCrud\ReactASPCrud\obj\Debug\net5.0\ReactASPCrud.csproj.AssemblyReference.cache

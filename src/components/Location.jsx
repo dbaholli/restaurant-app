@@ -4,8 +4,8 @@ import { validate } from 'uuid';
 
 const defaultImageSrc = '/img/imageLocation.png'
 
-const initialFValues = {
-    locationId: 0,
+const initialFieldValues = {
+    locationID: 0,
     locationName: '',
     description: '',
     imageName: '',
@@ -15,10 +15,15 @@ const initialFValues = {
 
 export default function Location(props) {
 
-    const {addOrEdit} = props
+    const { addOrEdit, recordForEdit } = props
     
-    const [values, setValues] = useState(initialFValues);
+    const [values, setValues] = useState(initialFieldValues);
     const [errors, setErrors] = useState({});
+
+    useEffect(() => { 
+        if(recordForEdit != null)
+        setValues(recordForEdit);
+    }, [recordForEdit])
 
     const handleInputChange = e => {
         const {name, value} = e.target;
@@ -58,7 +63,7 @@ export default function Location(props) {
     }
 
     const resetForm = () => {
-        setValues(initialFValues)
+        setValues(initialFieldValues)
         document.getElementById('image-uploader').value = null;
         setErrors({})
     }
@@ -67,7 +72,7 @@ export default function Location(props) {
         e.preventDefault()
         if(validate()){
             const formData = new FormData()
-            formData.append('locationId', values.locationId)
+            formData.append('locationID', values.locationID)
             formData.append('locationName', values.locationName)
             formData.append('description', values.description)
             formData.append('imageName', values.imageName)

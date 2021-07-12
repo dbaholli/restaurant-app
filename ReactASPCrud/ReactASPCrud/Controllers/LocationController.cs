@@ -28,7 +28,16 @@ namespace ReactASPCrud.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<LocationModel>>> GetLocations()
         {
-            return await _context.Locations.ToListAsync();
+            return await _context.Locations
+                .Select(x => new LocationModel()
+                {
+                    LocationID = x.LocationID,
+                    LocationName = x.LocationName,
+                    Description = x.Description,
+                    ImageName = x.ImageName,
+                    ImageSrc = String.Format("{0}://{1}{2}/Images/{3}", Request.Scheme, Request.Host, Request.PathBase, x.ImageName)
+                })
+                .ToListAsync();
         }
 
         // GET: api/Location/5
@@ -48,11 +57,17 @@ namespace ReactASPCrud.Controllers
         // PUT: api/Location/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutLocationModel(int id, LocationModel locationModel)
+        public async Task<IActionResult> PutLocationModel(int id, [FromForm]LocationModel locationModel)
         {
             if (id != locationModel.LocationID)
             {
                 return BadRequest();
+            }
+
+            if(locationModel.ImageFile != null)
+            {
+                DeleteImage(locationModel.ImageName);
+                locationModel.ImageName =await SaveImage(locationModel.ImageFile);
             }
 
             _context.Entry(locationModel).State = EntityState.Modified;
@@ -97,6 +112,7 @@ namespace ReactASPCrud.Controllers
             {
                 return NotFound();
             }
+            DeleteImage(locationModel.ImageName);
 
             _context.Locations.Remove(locationModel);
             await _context.SaveChangesAsync();
@@ -120,6 +136,14 @@ namespace ReactASPCrud.Controllers
                 await imageFile.CopyToAsync(fileStream);
             }
             return imageName;
+        }
+
+        [NonAction]
+        public void DeleteImage(string imageName)
+        {
+            var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, "Images", imageName);
+            if (System.IO.File.Exists(imagePath))
+                System.IO.File.Delete(imagePath);
         }
     }
 }
