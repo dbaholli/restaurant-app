@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function LocationList() {
 
-    const locationAPI = (url = '') => {
+    const locationAPI = (url = 'https://localhost:5001/api/Location') => {
         return {
             fetchAll: () => axios.get(url),
             create: newRecord => axios.post(url, newRecord),

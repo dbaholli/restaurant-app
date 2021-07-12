@@ -34,6 +34,8 @@ namespace ReactASPCrud
             services.AddDbContext<LocationDBContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
 
+            services.AddCors();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton<UserService>();
             services.AddMvc(option => option.EnableEndpointRouting = false);
@@ -49,6 +51,10 @@ namespace ReactASPCrud
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, Microsoft.AspNetCore.Hosting.IHostingEnvironment env)
         {
+            app.UseCors(options => options.WithOrigins("http://localhost:3001")
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
