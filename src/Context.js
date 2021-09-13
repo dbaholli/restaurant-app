@@ -64,7 +64,22 @@ class ProductProvider extends Component {
                 Alldata : [...this.state.Alldata],
                 id : "", title : "", info : "", price : "", company : ""
             })
-        } 
+        } else {
+            const MaxID = Math.max(...this.state.Alldata.map(item => item.id));
+            const id = MaxID + 1;
+            const newArr = [];
+            newArr['title'] = this.state.updateEdit[1];
+            newArr['info'] = this.state.updateEdit[2];
+            newArr['price'] = this.state.updateEdit[3];
+            newArr['company'] = this.state.updateEdit[4];
+            this.setState({
+                Alldata : [...this.state.Alldata, newArr],
+                id : "", title : "", info : "", price : "", company : ""
+            })
+        }
+    }
+
+    
 
     render() {
         // console.log(this.state.Alldata);

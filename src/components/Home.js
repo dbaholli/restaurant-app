@@ -33,7 +33,8 @@ export default class Home extends Component {
                                         <td>{product.info}</td>
                                         <td>{product.price}</td>
                                         <td>{product.company}</td>
-                                        
+                                        <td><Button size="sm" variant="primary" onClick={() => {value.onEdit(product.id)}} >Edit</Button> | 
+                                        <Button size="sm" variant="danger" onClick={() => {value.onDelete(product.id)}} >Delete</Button>
                                         </td>
                                     </tr>
                                 )
