@@ -24,6 +24,7 @@ function Navbar() {
                     <Link to="/reservation"> Reservation </Link>
                     <Link to="/event"> Events </Link>
                     <Link to="/Search"> Search Recipes </Link>
+                    <Link to="/Pagesat"> Payments </Link>
                     {/* <Link to="/Order"> Order </Link> */}
                     {/* <Link to="/about"> About </Link> */}
                     <Link to="/contact"> Contact </Link> 
@@ -37,6 +38,7 @@ function Navbar() {
                 <Link to="/reservation"> Reservation </Link>
                 <Link to="/event"> Events </Link>
                 <Link to="/Search"> Search Recipes </Link>
+                <Link to="/Pagesat"> Payments </Link>
                 {/* <Link to="/Order"> Order </Link> */}
                 {/* <Link to="/about"> About </Link> */}
                 <Link to="/contact"> Contact </Link>

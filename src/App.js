@@ -20,6 +20,7 @@ import Dashboard from './pages/Dashboard';
 import Salary from './pages/Salary';
 import Notifications from './pages/Notifications';
 import Location from './pages/Location';
+import Pagesat from './pages/Pagesat';
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/contact" exact component={Contact}/>
           <Route path="/products" exact component={Products}/>
           <Route path="/notifications" exact component={Notifications}/>
+          <Route path="/pagesat" exact component={Pagesat} />
           {/* <Products heading='Choose your favorite' data={productData}/> */}
           
         </Switch>
