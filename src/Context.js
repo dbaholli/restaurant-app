@@ -79,7 +79,12 @@ class ProductProvider extends Component {
         }
     }
 
-    
+    onDelete = (id) => {
+        const tempProduct = this.state.Alldata.filter(item => item.id !== id);
+        this.setState({
+            Alldata : tempProduct
+        })
+    }
 
     render() {
         // console.log(this.state.Alldata);
